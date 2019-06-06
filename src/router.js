@@ -15,6 +15,7 @@ function RouterConfig({ history, app }) {
       path: '/',
       name: 'IndexPage',
       getComponent(nextState, cb) {
+        // TODO: wansong, 没传文件名也可以
         require.ensure([], (require) => {
           cb(null, require('./routes/IndexPage'));
         });
